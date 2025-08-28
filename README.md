@@ -1,16 +1,34 @@
-# savetodolist
 
-A new Flutter project.
+![Exemplo de Screenshot do App](https://i.imgur.com/i74DDq5.png)
 
-## Getting Started
+## Como Rodar o Projeto
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Pré-requisitos
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* É necessário ter o [Flutter SDK](https://flutter.dev/docs/get-started/install) (3.35.2 ) instalado.
+* Um emulador Android/iOS (Fiz utilizando o Android Studio)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Instruções
+
+
+
+
+1.  **Instale as dependências:**
+    ```bash
+    flutter pub get
+    ```
+
+2.  **Crie um Dispositivo:**
+    ```bash
+    Crie um Virtual Device (Dentro do Android Studio)
+    ```
+
+3.  **Inicialize o Dispositivo**
+    ```bash
+    É necessário inicializar o dispositivo criado
+    ```
+4.  **Execute o aplicativo:**
+    ```bash
+    flutter run
+    ```
