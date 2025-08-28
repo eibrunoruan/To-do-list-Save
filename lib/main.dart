@@ -17,12 +17,18 @@ class ToDo extends StatelessWidget {
       child: MaterialApp(
         title: 'To-Do List',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
-          brightness: Brightness.light,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xFFF8B424),
+            brightness: Brightness.light,
+          ),
+          useMaterial3: true,
         ),
         darkTheme: ThemeData(
-          brightness: Brightness.dark,
-          primarySwatch: Colors.blue,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xFFF8B424),
+            brightness: Brightness.dark,
+          ),
+          useMaterial3: true,
         ),
         themeMode: ThemeMode.system,
         home: const TelaTarefas(),

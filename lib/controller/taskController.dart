@@ -3,11 +3,7 @@ import 'package:uuid/uuid.dart';
 import '../model/taskModel.dart';
 
 class Controlador with ChangeNotifier {
-  final List<Tarefa> _tarefas = [
-    Tarefa(id: '1', titulo: 'Lavar a Louça', status: Status.toDo),
-    Tarefa(id: '2', titulo: 'Estender as Roupas', descricao: 'Estou trabalhando nisso', status: Status.doing),
-    Tarefa(id: '3', titulo: 'Escovar os Dentes', status: Status.done),
-  ];
+  final List<Tarefa> _tarefas = [];
   var uuid = const Uuid();
 
   List<Tarefa> get tarefas => _tarefas;

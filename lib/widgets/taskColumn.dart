@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../controller/taskController.dart';
 import '../model/taskModel.dart';
+import 'taskCard.dart';
 
 class ColunaTarefa extends StatelessWidget {
   final String titulo;
@@ -16,7 +17,7 @@ class ColunaTarefa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controlador = Provider.of<Controlador>(context);
-    final tarefasDaColuna = controlador.getTarefasStatus(status);
+    final tarefasColuna = controlador.getTarefasStatus(status);
 
     return DragTarget<Tarefa>(
       onAccept: (tarefaRecebida) {
@@ -44,34 +45,24 @@ class ColunaTarefa extends StatelessWidget {
               ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount: tarefasDaColuna.length,
+                itemCount: tarefasColuna.length,
                 itemBuilder: (context, index) {
-                  final tarefa = tarefasDaColuna[index];
+                  final tarefa = tarefasColuna[index];
 
                   return Draggable<Tarefa>(
                     data: tarefa,
                     feedback: Material(
                       color: Colors.transparent,
-                      child: Card(
-                        elevation: 8.0,
-                        child: Container(
-                          padding: const EdgeInsets.all(12),
-                          width: MediaQuery.of(context).size.width * 0.8,
-                          child: Text(tarefa.titulo),
-                        ),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.8,
+                        child: CardTarefa(tarefa: tarefa),
                       ),
                     ),
                     childWhenDragging: Opacity(
                       opacity: 0.4,
-                      child: Card(child: ListTile(title: Text(tarefa.titulo))),
+                      child: CardTarefa(tarefa: tarefa),
                     ),
-                    child: Card(
-                      margin: const EdgeInsets.symmetric(vertical: 4),
-                      child: ListTile(
-                        title: Text(tarefa.titulo),
-                        subtitle: tarefa.descricao.isNotEmpty ? Text(tarefa.descricao) : null,
-                      ),
-                    ),
+                    child: CardTarefa(tarefa: tarefa),
                   );
                 },
               ),
