@@ -1,7 +1,7 @@
 enum Status {
-  aFazer,
-  fazendo,
-  conluido,
+  toDo,
+  doing,
+  done,
 }
 
 class Tarefa {
