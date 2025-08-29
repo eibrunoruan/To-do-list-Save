@@ -1,5 +1,5 @@
 
-![Exemplo de Screenshot do App](https://i.imgur.com/i74DDq5.png)
+![Exemplo de Screenshot do App](https://i.imgur.com/pnrkegT.png)
 
 ## Como Rodar o Projeto
 
