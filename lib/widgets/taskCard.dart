@@ -16,16 +16,16 @@ class CardTarefa extends StatelessWidget {
           tarefa.titulo,
           style: TextStyle(
             decoration: ehConcluida ? TextDecoration.lineThrough : null,
-            decorationColor: Colors.black,
+            decorationColor: Colors.white70,
             decorationThickness: 2.0,
-            color: ehConcluida ? Colors.grey.shade700 : null,
+            color: ehConcluida ? Colors.grey.shade500 : null,
           ),
         ),
         subtitle: tarefa.descricao.isNotEmpty
-          ? Text (
+            ? Text(
           tarefa.descricao,
           style: TextStyle(
-            color: ehConcluida ? Colors.grey.shade700 : null,
+            color: ehConcluida ? Colors.grey.shade500 : null,
           ),
         )
             : null,

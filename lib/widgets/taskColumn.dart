@@ -28,7 +28,9 @@ class ColunaTarefa extends StatelessWidget {
           constraints: const BoxConstraints(minHeight: 200),
           padding: const EdgeInsets.all(12.0),
           decoration: BoxDecoration(
-            color: candidateData.isNotEmpty ? Colors.blue.withOpacity(0.1) : Colors.black.withOpacity(0.05),
+            color: candidateData.isNotEmpty
+                ? Theme.of(context).colorScheme.primary.withOpacity(0.2)
+                : const Color(0xFF3D3A4B),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Column(
@@ -41,14 +43,12 @@ class ColunaTarefa extends StatelessWidget {
               ),
               const Divider(thickness: 1.5),
               const SizedBox(height: 8),
-
               ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: tarefasColuna.length,
                 itemBuilder: (context, index) {
                   final tarefa = tarefasColuna[index];
-
                   return Draggable<Tarefa>(
                     data: tarefa,
                     feedback: Material(

@@ -17,13 +17,25 @@ class ToDo extends StatelessWidget {
       child: MaterialApp(
         title: 'To-Do List',
         theme: ThemeData(
+          brightness: Brightness.dark,
+          scaffoldBackgroundColor: const Color(0xFF302C3C),
+          cardTheme: const CardThemeData(
+            color: Color(0xFF4A4659),
+            elevation: 2,
+          ),
           colorScheme: ColorScheme.fromSeed(
             seedColor: const Color(0xFFF8B424),
-            brightness: Brightness.light,
+            brightness: Brightness.dark,
           ),
           useMaterial3: true,
         ),
         darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          scaffoldBackgroundColor: const Color(0xFF302C3C),
+          cardTheme: const CardThemeData(
+            color: Color(0xFF4A4659),
+            elevation: 2,
+          ),
           colorScheme: ColorScheme.fromSeed(
             seedColor: const Color(0xFFF8B424),
             brightness: Brightness.dark,

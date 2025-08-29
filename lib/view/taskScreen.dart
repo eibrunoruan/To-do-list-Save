@@ -11,7 +11,26 @@ class TelaTarefas extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TO-DO LIST SAVE'),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'assets/logo.png',
+              height: 48,
+            ),
+            const SizedBox(width: 8),
+            Text(
+              'To-Do List',
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
